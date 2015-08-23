@@ -27,13 +27,3 @@ cacheSolve <- function(x=matrix(), ...) {
   x$setmatrix(m)
   m
 }
-i <- x$getinverse()
-if(!is.null(i)) {
-  message("Obteniendo Datos de Cache")
-  return(i)
-}
-data <- x$get()
-i <- solve(data, ...)
-x$setinverse(i)
-i
-}
